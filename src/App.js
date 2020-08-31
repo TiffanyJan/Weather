@@ -1,6 +1,6 @@
-import {React,useState} from 'react';
+import React,{useState} from 'react';
 import './App.css';
-import './bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import sunImg from "./sun.png";
 import sunAndCloud from "./sunAndCloud.png";
 import sunAndRain from "./sunAndRain.jp.jpg";
@@ -59,11 +59,13 @@ function App() {
     <div className="heading">
     <h1>Weather</h1>
     </div>
-
+    <div className="container">
     <div className="row mt-2">
         {dailyWeather.map((weather) => (
           <div key={weather.day} style={{ margin: "0 auto" }}>
+            
             <div className="row mt-2">{weather.day}</div>
+            </div>
             <div className="row mt-2">
                 <img
                   className="card-img-top"
@@ -74,6 +76,7 @@ function App() {
             </div>
           </div>
         ))}
+      </div>
       </div>
      </>
   );
