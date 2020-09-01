@@ -59,23 +59,24 @@ function App() {
       <div className="heading">
         <h1>Weather</h1>
       </div>
-      <div className="container">
-        {dailyWeather.map((weather) => (
+
+<div class="scrollmenu">
+{dailyWeather.map((weather) => (
           <div key={weather.day} style={{ margin: "0 auto" }}>
-            <div className="col-sm-1">
-              <div className="col-sm-1">{weather.day}</div>
-            </div>
+            <a className="col-sm-1">{weather.day}</a>
             <div className="col-sm-1">
               <img
-                className="card-img-top"
-                src={weather.img}
+                className="card-img-top"  
+                src={weather.img} 
                 alt="Image"
                 style={{ width: "8rem", margin: "0" }}
               ></img>
             </div>
           </div>
-        ))}
-      </div>
+        ))} 
+</div>
+
+     
     </>
   );
 }

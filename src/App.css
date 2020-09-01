@@ -8,9 +8,6 @@ h1{
   margin-bottom: 10px;
   padding-bottom: 68px;
 }
-.h1, h1 {
-  font-size: 50px;
-}
 
 h1, h1 {
   font-size: 44px;
@@ -18,4 +15,26 @@ h1, h1 {
   margin-top: 20px;
   margin-bottom: 10px;
   padding-bottom: 68px;
+}
+
+.container {
+  overflow: auto;
+  width:1000px;
+  display: inline-block;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu img {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
 }
