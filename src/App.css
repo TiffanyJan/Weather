@@ -38,3 +38,8 @@ div.scrollmenu img {
   padding: 14px;
   text-decoration: none;
 }
+
+div.scrollmenu a:hover{
+  background-color: rgb(73, 62, 47)
+}
+
