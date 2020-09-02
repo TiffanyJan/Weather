@@ -24,11 +24,24 @@ h1, h1 {
 }
 
 div.scrollmenu a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
+  background:#EFEFEF; 
+  box-shadow: 1px 1px 10px #999; 
+  margin: auto; 
+  text-align: center; 
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px !important;
+  width: 800px;
+  padding-top: 5px;
+}
+
+div.scrolls{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 1000px;
+white-space:nowrap
 }
 
 div.scrollmenu img {
@@ -39,7 +52,15 @@ div.scrollmenu img {
   text-decoration: none;
 }
 
-div.scrollmenu a:hover{
-  background-color: rgb(73, 62, 47)
-}
 
+
+.imageDiv img { 
+  box-shadow: 1px 1px 10px #999; 
+  margin: 2px;
+  max-height: 50px;
+  cursor: pointer;
+display:inline-block;
+*display:inline;
+*zoom:1;
+vertical-align:top;
+}

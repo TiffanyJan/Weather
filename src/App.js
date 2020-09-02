@@ -61,7 +61,7 @@ function App() {
       </div>     
 
 <div class="scrollmenu">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <div class="scrolls">
 {dailyWeather.map((weather) => (
           <div key={weather.day} style={{ margin: "0 auto" }}>
             <a className="col-sm-1">{weather.day}</a>
@@ -75,7 +75,7 @@ function App() {
             </div>
           </div>
         ))} 
-
+</div>
 </div>
 
      
