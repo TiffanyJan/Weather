@@ -33,14 +33,17 @@ div.scrollmenu a {
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin-bottom: 20px !important;
-  width: 800px;
+  width: 95px;
   padding-top: 5px;
 }
+
 
 div.scrolls{
   overflow-x: scroll;
   overflow-y: hidden;
   height: 1000px;
+  overflow: auto;
+  white-space: nowrap;
 white-space:nowrap
 }
 
@@ -51,7 +54,6 @@ div.scrollmenu img {
   padding: 14px;
   text-decoration: none;
 }
-
 
 
 .imageDiv img { 
