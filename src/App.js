@@ -62,6 +62,9 @@ function App() {
                   style={{ width: "20rem", margin: "7" }}
                 ></img>
             </div>
+            <div className="col-xs-3">
+              {daily.forecast}
+            </div>
           </div>
         ))}
         </div>
