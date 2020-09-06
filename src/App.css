@@ -37,8 +37,11 @@ vertical-align:top;
 .row > .col-xs-3 {
   display:flex;
   flex: 0 0 25%;
-  max-width: 51%;
   float:center;
+}
+
+.col-xs-3 {
+  width: 34%;
 }
 
 .flex-nowrap {

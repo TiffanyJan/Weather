@@ -59,10 +59,10 @@ function App() {
                   className="card-img-top"
                   src={daily.img}
                   alt="Image"
-                  style={{ width: "20rem", margin: "7" }}
+                  style={{ width: "20rem", margin: "10", float:"center" }}
                 ></img>
             </div>
-            <div className="col-xs-3">
+            <div className="col-xs-4">
               {daily.forecast}
             </div>
           </div>
