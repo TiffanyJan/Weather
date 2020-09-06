@@ -28,16 +28,6 @@ function App() {
       img: sunImg,
     },
     {
-      day: "Wednesday",
-      forecast: "Cloudy with Sun",
-      img: sunAndCloud,
-    },
-    {
-      day: "Thursday",
-      forecast: "Cloudy with Sun",
-      img: sunAndCloud,
-    },
-    {
       day: "Friday",
       forecast: "Cloudy with Sun",
       img: sunAndCloud,
@@ -69,7 +59,7 @@ function App() {
                   className="card-img-top"
                   src={daily.img}
                   alt="Image"
-                  style={{ width: "10rem", margin: "4" }}
+                  style={{ width: "20rem", margin: "7" }}
                 ></img>
             </div>
           </div>
