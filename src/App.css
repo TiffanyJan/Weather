@@ -23,39 +23,6 @@ h1, h1 {
   display: inline-block;
 }
 
-div.scrollmenu a {
-  background:#EFEFEF; 
-  box-shadow: 1px 1px 10px #999; 
-  margin: auto; 
-  text-align: center; 
-  position: relative;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 20px !important;
-  width: 95px;
-  padding-top: 5px;
-}
-
-
-div.scrolls{
-  overflow-x: scroll;
-  overflow-y: hidden;
-  height: 1000px;
-  overflow: auto;
-  white-space: nowrap;
-white-space:nowrap
-}
-
-div.scrollmenu img {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-
 .imageDiv img { 
   box-shadow: 1px 1px 10px #999; 
   margin: 2px;
@@ -65,4 +32,30 @@ display:inline-block;
 *display:inline;
 *zoom:1;
 vertical-align:top;
+}
+
+.row > .col-xs-3 {
+  display:flex;
+  flex: 0 0 25%;
+  max-width: 25%
+}
+
+.flex-nowrap {
+  -webkit-flex-wrap: nowrap!important;
+  -ms-flex-wrap: nowrap!important;
+  flex-wrap: nowrap!important;
+}
+.flex-row {
+  display:flex;
+  -webkit-box-orient: horizontal!important;
+  -webkit-box-direction: normal!important;
+  -webkit-flex-direction: row!important;
+  -ms-flex-direction: row!important;
+  flex-direction: row!important;
+}
+
+
+.well {
+  min-height: 300px;
+  width: 100%;
 }

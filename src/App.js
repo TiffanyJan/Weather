@@ -56,26 +56,26 @@ function App() {
 
   return (
     <>
-      <div className="heading">
-        <h1>Weather</h1>
-      </div>     
-
-<div class="scrollmenu">
-  <div class="scrolls">
-{dailyWeather.map((weather) => (
-          <div key={weather.day} style={{ margin: "0 auto" }}>
-            <a className="col-sm-1">{weather.day}</a>
-            <div className="col-sm-1">
-              <img
-                className="card-img-top"  
-                src={weather.img} 
-                alt="Image"
-                style={{ width: "8rem", margin: "0" }}
-              ></img>
+  <div class="container-fluid">
+    <h1>Weather</h1>
+    <div class="row flex-row flex-nowrap">
+      
+        <div class="col-xs-3">
+        {dailyWeather.map((daily) => (
+          <div key={daily.day} style={{ margin: "0 auto" }}>
+            <div className="col-xs-3">{daily.day}</div>
+            <div className="col-xs-3">
+                <img
+                  className="card-img-top"
+                  src={daily.img}
+                  alt="Image"
+                  style={{ width: "10rem", margin: "4" }}
+                ></img>
             </div>
           </div>
-        ))} 
-</div>
+        ))}
+        </div>
+    </div>
 </div>
 
      
