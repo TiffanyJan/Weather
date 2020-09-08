@@ -1,7 +1,7 @@
 
 h1 {
   font-size: 44px;
-  font-weight: 900;
+  font-weight: 900 !important;
   margin-top: 20px;
   margin-bottom: 10px;
   padding-bottom: 68px;
