@@ -53,8 +53,8 @@ function App() {
         <div class="col-xs-3">
         {dailyWeather.map((daily) => (
           <div key={daily.day} style={{ margin: "0 auto" }}>
-            <div className="col-xs-3">{daily.day}</div>
-            <div className="col-xs-3">
+            <div className="row mt-2">{daily.day}</div>
+            <div className="row mt-2">
                 <img
                   className="card-img-top"
                   src={daily.img}
@@ -62,7 +62,7 @@ function App() {
                   style={{ width: "20rem", margin: "10", float:"center" }}
                 ></img>
             </div>
-            <div className="col-xs-4">
+            <div className="row mt-2">
               {daily.forecast}
             </div>
           </div>

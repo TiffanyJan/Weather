@@ -9,6 +9,11 @@ h1 {
   text-align: center;
 }
 
+.row .mt-2{
+  margin-right: 43px;
+  margin-left: -15px;
+}
+
 .container {
   overflow: auto;
   width:1000px;
