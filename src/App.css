@@ -12,6 +12,9 @@ h1 {
 .row .mt-2{
   margin-right: 43px;
   margin-left: -15px;
+  font-family: "Courier New" !important;
+  font-weight: 600 !important;
+  text-align: center;
 }
 
 .container {
