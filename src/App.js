@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import sunImg from "./sun.png";
-import sunAndCloud from "./sunAndCloud.png";
+import sunImg from "./sunshine.png";
+import sunAndCloud from "./suncloud.png";
 import sunAndRain from "./sunAndRain.jp.jpg";
-import cloud from "./clouds.jpg";
+
 
 function App() {
   const [dailyWeather, setDailyWeather] = useState([
