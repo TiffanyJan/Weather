@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sunshine.png";
-import sunAndCloud from "./suncloud.png";
-import sunAndRain from "./sunAndRain.jp.jpg";
+import sunAndCloud from "./sunAndCloud.png";
+import sunAndRain from "./sunWithRain.png";
 
 
 function App() {
