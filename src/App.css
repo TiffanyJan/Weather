@@ -9,6 +9,10 @@ h1 {
   text-align: center;
 }
 
+body {
+  background-image: url("./clouds.jpg");
+}
+
 .row .mt-2{
   margin-right: 43px;
   margin-left: -15px;

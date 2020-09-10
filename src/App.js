@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sun.png";
 import sunAndCloud from "./sunAndCloud.png";
 import sunAndRain from "./sunAndRain.jp.jpg";
+import cloud from "./clouds.jpg";
 
 function App() {
   const [dailyWeather, setDailyWeather] = useState([
