@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sunshine.png";
-import sunAndCloud from "./sunAndCloud.png";
+import sunAndCloud from "./cloudySun.jpg";
 import sunAndRain from "./sunWithRain.png";
 
 
