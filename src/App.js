@@ -5,6 +5,15 @@ import sunImg from "./sunshine.png";
 import sunAndCloud from "./cloudySun.jpg";
 import sunAndRain from "./sunWithRain.png";
 
+function getWeatherDetails(id) {
+  fetch(
+    "https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&exclude=current,minutely,hourly&appid=${process.env.REACT_APP_API_KEY}"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      props.setWeatherDetails(data);
+    });
+}
 
 function App() {
   const [dailyWeather, setDailyWeather] = useState([
@@ -47,32 +56,27 @@ function App() {
 
   return (
     <>
-  <div class="container-fluid">
-    <h1>Weather</h1>
-    <div class="row flex-row flex-nowrap">
-      
-        <div class="col-xs-3">
-        {dailyWeather.map((daily) => (
-          <div key={daily.day} style={{ margin: "0 auto" }}>
-            <div className="row mt-2">{daily.day}</div>
-            <div className="row mt-2">
-                <img
-                  className="card-img-top"
-                  src={daily.img}
-                  alt="Image"
-                  style={{ width: "20rem", margin: "10", float:"center" }}
-                ></img>
-            </div>
-            <div className="row mt-2">
-              {daily.forecast}
-            </div>
+      <div class="container-fluid">
+        <h1>Weather</h1>
+        <div class="row flex-row flex-nowrap">
+          <div class="col-xs-3">
+            {dailyWeather.map((daily) => (
+              <div key={daily.day} style={{ margin: "0 auto" }}>
+                <div className="row mt-2">{daily.day}</div>
+                <div className="row mt-2">
+                  <img
+                    className="card-img-top"
+                    src={daily.img}
+                    alt="Image"
+                    style={{ width: "20rem", margin: "10", float: "center" }}
+                  ></img>
+                </div>
+                <div className="row mt-2">{daily.forecast}</div>
+              </div>
+            ))}
           </div>
-        ))}
         </div>
-    </div>
-</div>
-
-     
+      </div>
     </>
   );
 }
