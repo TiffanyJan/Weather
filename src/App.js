@@ -1,21 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sunshine.png";
 import sunAndCloud from "./cloudySun.jpg";
 import sunAndRain from "./sunWithRain.png";
 
-function getWeatherDetails(id) {
-  fetch(
-    "https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&exclude=current,minutely,hourly&appid=${process.env.REACT_APP_API_KEY}"
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      props.setWeatherDetails(data);
-    });
-}
 
 function App() {
+
+  useEffect(() => {
+    getWeatherDetails()
+    },[]);
+    
+    function getWeatherDetails() {
+      fetch(
+        `https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&exclude=current,minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+      
+        const convertEpochToDay = (dt) => {
+
+          var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          var d = new Date(dt * 1000);
+           var dayName = days[d.getDay()];
+
+           return dayName
+        }
+
+      let dailyArray = data.daily.map(daily => ({
+            day: convertEpochToDay(daily.dt),
+            forecast: "Sunny",
+            img: sunImg,
+          }))
+          setDailyWeather(dailyArray)
+          console.log(dailyArray)
+        });
+    }
+
   const [dailyWeather, setDailyWeather] = useState([
     {
       day: "Monday",
