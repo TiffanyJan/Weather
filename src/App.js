@@ -28,13 +28,18 @@ function App() {
            return dayName
         }
 
+        // const dailyForecast = (forecast) => {
+        //   console.log(current.daily.weather.description)
+        // }
+
       let dailyArray = data.daily.map(daily => ({
             day: convertEpochToDay(daily.dt),
-            forecast: "Sunny",
+            forecast: (daily.weather[0].description),
             img: sunImg,
           }))
           setDailyWeather(dailyArray)
           console.log(dailyArray)
+        
         });
     }
 
