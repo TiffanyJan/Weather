@@ -4,7 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sunshine.png";
 import sunAndCloud from "./cloudySun.jpg";
 import sunAndRain from "./sunWithRain.png";
-
+import cloudy from "./cloudy.jpg";
+import thunderstorm from "./thunderstorm.png";
+import drizzle from "./drizzle.jpeg";
+import rain from "./rain.png";
+import snow from "./snow.png";
 
 function App() {
 
@@ -28,14 +32,32 @@ function App() {
            return dayName
         }
 
-        // const dailyForecast = (forecast) => {
-        //   console.log(current.daily.weather.description)
-        // }
+        const weatherImage = (forecast) => {
+          switch (forecast) {
+            case "clear":
+              return sunImg;
+
+            case "Clouds":
+            return cloudy;
+
+            case "Thunderstorm":
+              return thunderstorm;
+
+            case "Drizzle":
+              return drizzle;
+
+            case "Rain":
+              return rain;
+
+            case "Snow":
+              return snow;
+            
+        }
 
       let dailyArray = data.daily.map(daily => ({
             day: convertEpochToDay(daily.dt),
             forecast: (daily.weather[0].description),
-            img: sunImg,
+            img: weatherImage(daily.weather[0].main),
           }))
           setDailyWeather(dailyArray)
           console.log(dailyArray)
