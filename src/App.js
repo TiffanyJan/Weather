@@ -34,7 +34,7 @@ function App() {
 
         const weatherImage = (forecast) => {
           switch (forecast) {
-            case "clear":
+            case "Clear":
               return sunImg;
 
             case "Clouds":
@@ -53,6 +53,7 @@ function App() {
               return snow;
             
         }
+      }
 
       let dailyArray = data.daily.map(daily => ({
             day: convertEpochToDay(daily.dt),
