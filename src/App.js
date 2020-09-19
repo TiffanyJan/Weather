@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Dropdown } from 'react-bootstrap';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sunshine.png";
@@ -120,12 +121,24 @@ function App() {
                     alt="Image"
                     style={{ width: "20rem", margin: "10", float: "center" }}
                   ></img>
+                          <Dropdown>
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    Dropdown Button
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
                 </div>
                 <div className="row mt-2">{daily.forecast}</div>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </>
   );
