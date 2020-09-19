@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Dropdown } from 'react-bootstrap';
+import { Dropdown } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sunshine.png";
@@ -12,26 +12,31 @@ import rain from "./rainfall.png";
 import snow from "./snow.png";
 
 function App() {
-
   useEffect(() => {
-    getWeatherDetails()
-    },[]);
-    
-    function getWeatherDetails() {
-      fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&exclude=current,minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-      
+    getWeatherDetails();
+  }, []);
+
+  function getWeatherDetails() {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&exclude=current,minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
         const convertEpochToDay = (dt) => {
-
-          var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          var days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ];
           var d = new Date(dt * 1000);
-           var dayName = days[d.getDay()];
+          var dayName = days[d.getDay()];
 
-           return dayName
-        }
+          return dayName;
+        };
 
         const weatherImage = (forecast) => {
           switch (forecast) {
@@ -39,7 +44,7 @@ function App() {
               return sunImg;
 
             case "Clouds":
-            return cloudy;
+              return cloudy;
 
             case "Thunderstorm":
               return thunderstorm;
@@ -52,20 +57,18 @@ function App() {
 
             case "Snow":
               return snow;
-            
-        }
-      }
+          }
+        };
 
-      let dailyArray = data.daily.map(daily => ({
-            day: convertEpochToDay(daily.dt),
-            forecast: (daily.weather[0].description),
-            img: weatherImage(daily.weather[0].main),
-          }))
-          setDailyWeather(dailyArray)
-          console.log(dailyArray)
-        
-        });
-    }
+        let dailyArray = data.daily.map((daily) => ({
+          day: convertEpochToDay(daily.dt),
+          forecast: daily.weather[0].description,
+          img: weatherImage(daily.weather[0].main),
+        }));
+        setDailyWeather(dailyArray);
+        console.log(dailyArray);
+      });
+  }
 
   const [dailyWeather, setDailyWeather] = useState([
     {
@@ -115,30 +118,37 @@ function App() {
               <div key={daily.day} style={{ margin: "0 auto" }}>
                 <div className="row mt-2">{daily.day}</div>
                 <div className="row mt-2">
-                  <img
-                    className="card-img-top"
-                    src={daily.img}
-                    alt="Image"
-                    style={{ width: "20rem", margin: "10", float: "center" }}
-                  ></img>
-                          <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
-  </Dropdown.Toggle>
+                  <Dropdown>
+                    <Dropdown.Toggle  id="dropdown-basic">
+                      <img
+                        className="card-img-top"
+                        src={daily.img}
+                        alt="Image"
+                        style={{
+                          width: "20rem",
+                          margin: "10",
+                          float: "center",
+                        }}
+                      ></img>
+                    </Dropdown.Toggle>
 
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
+    
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Another action
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Something else
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </div>
                 <div className="row mt-2">{daily.forecast}</div>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </>
   );
