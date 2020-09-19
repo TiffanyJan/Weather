@@ -4,10 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import sunImg from "./sunshine.png";
 import sunAndCloud from "./cloudySun.jpg";
 import sunAndRain from "./sunWithRain.png";
-import cloudy from "./cloudy.jpg";
+import cloudy from "./Cloud1.png";
 import thunderstorm from "./thunderstorm.png";
 import drizzle from "./drizzle.jpeg";
-import rain from "./rain.png";
+import rain from "./rainfall.png";
 import snow from "./snow.png";
 
 function App() {
