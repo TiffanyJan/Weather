@@ -64,8 +64,12 @@ vertical-align:top;
   flex-direction: row!important;
 }
 
-
 .well {
   min-height: 300px;
   width: 100%;
+}
+
+.btn-primary {
+  background-color:Transparent !important;
+  border-color:Transparent !important;
 }

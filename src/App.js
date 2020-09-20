@@ -68,6 +68,8 @@ function App() {
         setDailyWeather(dailyArray);
         console.log(dailyArray);
       });
+
+      
   }
 
   const [dailyWeather, setDailyWeather] = useState([
@@ -131,8 +133,6 @@ function App() {
                         }}
                       ></img>
                     </Dropdown.Toggle>
-
-    
                     <Dropdown.Menu>
                       <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                       <Dropdown.Item href="#/action-2">
@@ -142,6 +142,7 @@ function App() {
                         Something else
                       </Dropdown.Item>
                     </Dropdown.Menu>
+
                   </Dropdown>
                 </div>
                 <div className="row mt-2">{daily.forecast}</div>
